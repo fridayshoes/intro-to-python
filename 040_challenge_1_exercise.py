@@ -30,7 +30,69 @@ print("")
 print("Function: report_long_words")
 
 def report_long_words(words):
-  pass
+  words_without_hyphen = exclude_hyphen_words(words)
+  words_ten_or_longer = exclude_short_words(words_without_hyphen)
+  words_report = create_word_report(words_ten_or_longer)
+  return (f'These words are quite long: {", ".join(words_report)}')
+
+def exclude_hyphen_words(words):
+  words_without_hyphen = []
+  for word in words:
+    if "-" not in word:
+      words_without_hyphen.append(word)
+  return words_without_hyphen
+      
+def exclude_short_words(words_without_hyphen):
+  words_ten_or_longer = []
+  for word in words_without_hyphen:
+    if len(word) >= 10:
+      words_ten_or_longer.append(word)
+  return words_ten_or_longer
+  
+
+def create_word_report(words_ten_or_longer):
+  words_report = []
+  for word in words_ten_or_longer:
+    if len(word) >= 15:
+      words_report.append((word[:15]) + "...")
+    else:
+      words_report.append(word)
+  return words_report
+  
+
+print("Function - exclude hyphen words:")
+print(exclude_hyphen_words([
+    'hello',
+    'nonbiological',
+    'Kay',
+    'this-is-a-long-word',
+    'antidisestablishmentarianism'
+  ]))
+
+print("Function - exclude short words:")
+print(exclude_short_words([
+    'hello',
+    'nonbiological',
+    'Kay',
+    'antidisestablishmentarianism'
+  ]))
+
+print("Function - create word report:")
+print(create_word_report([
+    'nonbiological',
+    'antidisestablishmentarianism'
+  ]))
+
+
+print("Function - report_long_words:")
+print(report_long_words([
+    'hello',
+    'nonbiological',
+    'Kay',
+    'this-is-a-long-word',
+    'antidisestablishmentarianism'
+  ]))
+  
 
 check_that_these_are_equal(
   report_long_words([
