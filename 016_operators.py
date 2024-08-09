@@ -87,7 +87,10 @@ print(f"2 ** 3 = {expr} (should be 8)")
 # research. You're very welcome to try out a few below:
 
 # OPERATOR PLAYGROUND STARTS
+a = 5
+b = 2
 
+print(a > b)    #Should be True)
 
 
 # OPERATOR PLAYGROUND ENDS
