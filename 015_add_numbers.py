@@ -1,3 +1,4 @@
+from _typeshed import SupportsDivMod
 from lib.helpers import check_that_these_are_equal
 
 # Video alternative: https://vimeo.com/954334235/902b0b036d#t=444
