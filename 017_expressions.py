@@ -101,7 +101,15 @@ add_one(add_one(add_one(add_one(add_one(add_one(1))))))
 
 # EXPRESSIONS PLAYGROUND BEGINS
 
+3 * add_one(add_one(add_one(5))) * 5   # Evaluates to 120
 
+400 / add_one(add_one(add_one(7))) +27  # Evaluates to 67.0
+
+400 // add_one(add_one(add_one(7))) +27  # Evaluates to 67
+
+400 % add_one(add_one(add_one(7))) +27  # Evaluates to 27
+
+4 ** 3 + add_one(4) * 1000  # Evaluates to 5064
 
 # EXPRESSIONS PLAYGROUND ENDS
 
